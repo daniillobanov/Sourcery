@@ -118,16 +118,17 @@ internal struct ParserResultsComposed {
                     return
                 }
 
-                let shoudUpdateInTypeMap: Bool = {
-                    guard let moduleName = type.module else { return false }
-                    let arr1 = type.globalName.components(separatedBy: ".")
-                    let arr2 = oldName.components(separatedBy: ".")
-                    let diff = Set(arr1).subtracting(arr2)
-                    return diff.contains(moduleName)
-                }()
-                if shoudUpdateInTypeMap {
-                    typeMap[type.globalName] = type
-                }
+//                let shoudUpdateInTypeMap: Bool = {
+//                    guard let moduleName = type.module else { return false }
+//                    let arr1 = type.globalName.components(separatedBy: ".")
+//                    let arr2 = oldName.components(separatedBy: ".")
+//                    let diff = Set(arr1).subtracting(arr2)
+//                    return diff.contains(moduleName)
+//                }()
+//                if shoudUpdateInTypeMap {
+//                    typeMap[type.globalName] = type
+//                }
+                typeMap[type.globalName] = type
                 rewriteChildren(of: type)
             }
 
