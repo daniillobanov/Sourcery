@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Sourcery"
-  s.version      = "2.2.5"
+  s.version      = "2.2.5-t-fix"
   s.summary      = "A tool that brings meta-programming to Swift, allowing you to code generate Swift code."
   s.ios.deployment_target = '12'
   s.osx.deployment_target = '10.15'
@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.author       = { "Krzysztof Zabłocki" => "krzysztof.zablocki@pixle.pl" }
   s.social_media_url = "https://twitter.com/merowing_"
 
-  s.source       = { :http => "https://github.com/krzysztofzablocki/Sourcery/releases/download/#{s.version}/sourcery-#{s.version}.zip" }
+  s.source       = { :http => "https://github.com/daniillobanov/Sourcery/releases/download/#{s.version}/sourcery-#{s.version}.zip" }
   s.preserve_paths = '*'
   s.exclude_files = '**/file.zip'
 
